@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Tuesday</title>
+  <meta name="description" content="Random Tuesday: a vending machine for local art and assorted shenanigans in San Francisco.">
+  <meta property="og:title" content="Random Tuesday">
+  <meta property="og:description" content="A vending machine for local art and assorted shenanigans.">
+  <meta property="og:image" content="images/vending-machine.png">
+  <link rel="icon" href="images/random-tuesday-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <!-- Animated swirling background (WebGL). The CSS gradient behind it is the fallback. -->
+    <canvas class="hero__bg" aria-hidden="true"></canvas>
+
+    <a class="hero__logo" href="/" aria-label="Random Tuesday home">
+      <img src="images/random-tuesday-logo.png" alt="Random Tuesday" width="900" height="353">
+    </a>
+
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <h1 class="headline">
+          Vending Machine<br class="br-wide">
+          for<br class="br-narrow"> <span class="ul">Local Art &amp;<svg viewBox="0 0 300 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 11 C 50 7, 110 6, 170 6.5 S 260 5, 297 9"/></svg></span><br>
+          <span class="ul">Assorted<svg viewBox="0 0 300 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 60 8, 130 7, 190 7 S 270 6.5, 297 10"/></svg></span><br>
+          <span class="ul">Shenanigans<svg viewBox="0 0 300 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 50 8, 120 6, 190 6.5 S 265 7, 297 10"/></svg></span>
+        </h1>
+
+        <p class="find__label">You might find:</p>
+
+        <!-- Add or edit items here. The list scrolls upward, 5 at a time. -->
+        <div class="ticker" aria-label="Things you might find">
+          <ul class="ticker__list">
+            <li>Fortunes tucked into seashells</li>
+            <li>Temporary tattoos from local artists</li>
+            <li>Love letters from strangers</li>
+            <li>Your new favorite card game</li>
+            <li>Karl-approved beanies</li>
+            <li>Lucky cat Lego sets</li>
+            <li>Do-Over Ritual Kits</li>
+            <li>Apology balloons</li>
+            <li>Analog cameras</li>
+            <li>Tarot card blind boxes</li>
+            <li>Wombat stickers for your MIIR</li>
+            <li>Water toss ring games</li>
+            <li>Adulting scout badges</li>
+            <li>Pocket kites</li>
+            <li>Curated art from local celebs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <img src="images/vending-machine.png" alt="Hand-drawn Random Tuesday vending machine surrounded by starbursts" width="1000" height="1146">
+      </div>
+    </div>
+
+    <button class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause animation">
+      <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="6" width="3.2" height="12" rx="1"/><rect x="13.8" y="6" width="3.2" height="12" rx="1"/></svg>
+      <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- ============ ABOUT KATE ============ -->
+    <section class="about" id="about">
+      <div class="about__inner">
+        <div class="about__photo">
+          <img src="images/kate.jpg" alt="Kate smiling under string lights on a brick street at night" width="1000" height="1334" loading="lazy">
+        </div>
+
+        <div class="about__copy">
+          <h2 class="about__title">Hey there! <span class="ul ul--light">I’m Kate.<svg viewBox="0 0 300 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 60 7, 140 5, 210 6 S 280 8, 297 13"/></svg></span></h2>
+
+          <p class="about__small">Lover of early mornings, champion of unexpected delights, hoarder of SkyMall catalogs.</p>
+          <p>I’m excited to tuck moments of wonder and connection into the corners of San Francisco.</p>
+          <p>May you find something that matches your moment in the coils.</p>
+
+          <p class="about__hello">Say hello at <a href="mailto:kate@randomtuesday.art">kate@randomtuesday.art</a></p>
+
+          <div class="about__buttons">
+            <!-- TODO: replace # with the real destinations -->
+            <a class="btn" href="#host-a-machine">Host a Machine</a>
+            <a class="btn" href="#submit-your-art">Submit Your Art</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <img class="footer__logo" src="images/random-tuesday-logo.png" alt="Random Tuesday" width="900" height="353" loading="lazy">
+
+    <!-- Placeholder text: replace with your own blurb -->
+    <p class="footer__blurb">Agaro Collective is an independent strategy and design consultancy based in New York, NY. We’ve helped hundreds of clients realize their online potential. We are thrilled to have the opportunity to help you reach yours.</p>
+
+    <div class="footer__contact">
+      <a class="footer__email" href="mailto:kate@randomtuesday.art">kate@randomtuesday.art</a>
+      <a class="footer__phone" href="tel:+14155317818">(415) 531-7818</a>
+      <div class="footer__social">
+        <!-- TODO: replace # with the real profile URLs -->
+        <a href="#instagram" aria-label="Random Tuesday on Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="#facebook" aria-label="Random Tuesday on Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.5H7.4v3.3h2.8V22h3.3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Clover-shaped clip path for Kate's photo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <clipPath id="clover" clipPathUnits="objectBoundingBox">
+      <circle cx="0.29" cy="0.29" r="0.29"/>
+      <circle cx="0.71" cy="0.29" r="0.29"/>
+      <circle cx="0.29" cy="0.71" r="0.29"/>
+      <circle cx="0.71" cy="0.71" r="0.29"/>
+      <rect x="0.2" y="0.2" width="0.6" height="0.6"/>
+    </clipPath>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
